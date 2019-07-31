@@ -28,4 +28,9 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  file { '/root/README.md':
+        ensure  => file,
+        content => 'This should exist',
+        owner   => 'root',
+    }
 }
